@@ -1,0 +1,308 @@
+/* components/AdminAIAgent/CodeAnalysisTab.css */
+
+.code-analysis-container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.code-analysis-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.code-analysis-options {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.code-analysis-options h3 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.optimization-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optimization-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.analyze-button {
+  padding: 8px 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.analyze-button:hover {
+  background-color: #1d4ed8;
+}
+
+.analyze-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.code-analysis-main {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
+
+.code-analysis-main h3 {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.analysis-summary {
+  background-color: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.analysis-summary h4 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  color: #1e40af;
+}
+
+.metrics {
+  display: flex;
+  gap: 24px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.code-panels {
+  display: flex;
+  gap: 16px;
+  height: calc(100% - 120px);
+}
+
+.code-diff-container {
+  flex: 2;
+  overflow: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+}
+
+.issues-panel {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+}
+
+.issues-panel h4 {
+  font-size: 14px;
+  margin: 0;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.issues-list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.issue-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.issue-item:hover {
+  background-color: #f5f8ff;
+}
+
+.issue-item.selected {
+  background-color: #eff6ff;
+}
+
+.issue-severity {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.issue-severity[data-severity="error"] {
+  background-color: #ef4444;
+}
+
+.issue-severity[data-severity="warning"] {
+  background-color: #f59e0b;
+}
+
+.issue-severity[data-severity="info"] {
+  background-color: #3b82f6;
+}
+
+.issue-info {
+  flex: 1;
+}
+
+.issue-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.issue-location {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.issue-detail {
+  padding: 12px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.issue-detail h5 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.issue-detail p {
+  font-size: 13px;
+  margin: 0 0 12px 0;
+  color: #4b5563;
+}
+
+.issue-solution {
+  background-color: #f3f4f6;
+  border-left: 3px solid #2563eb;
+  padding: 8px 12px;
+  margin-top: 8px;
+}
+
+.issue-solution h6 {
+  font-size: 13px;
+  margin: 0 0 6px 0;
+  color: #1f2937;
+}
+
+.issue-solution pre {
+  font-size: 12px;
+  margin: 0;
+  white-space: pre-wrap;
+  color: #374151;
+}
+
+.action-buttons {
+  padding: 12px;
+  border-top: 1px solid #e0e0e0;
+  text-align: right;
+}
+
+.apply-button {
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+  background-color: #1d4ed8;
+}
+
+.no-file-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Styles pour le composant CodeEditor */
+.code-editor {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+}
+
+/* Styles pour le composant CodeDiff */
+.code-diff {
+  height: 100%;
+  overflow: auto;
+}
+
+.code-diff-title {
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.diff-line-added {
+  background-color: #d1fae5;
+}
+
+.diff-line-removed {
+  background-color: #fee2e2;
+}
+
+.feature-tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  background-color: #1d4ed8;
+  color: white;
+  border-radius: 10px;
+  margin-left: 6px;
+}
